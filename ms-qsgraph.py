@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import numpy as np
+n = np.linspace (1,50,50)
+best_case = n*np.log2(n)
+average_case = n*np.log2(n)
+worst_case = n*np.log2(n)
+plt.figure ( figsize=(10,20) )
+plt.plot(n, best_case,label="Best_case:0(nlogn)",color="green",linewidth=5 )
+plt.plot(n,average_case,label="Average_case:o(nlogn)",c="red",linewidth=2,linestyle="--")
+plt.plot(n,worst_case,label="Worst_case:0(nlogn)",c="blue",linestyle=":",linewidth=2)
+plt.xlabel("Input size(n)" , fontsize=14)
+plt.ylabel("Time complexity ", fontsize=14)
+plt.title("Grph for time complexity of Merge sort and Quick sort ")
+plt.grid(True)
+plt.legend()
+plt.show()
